@@ -36,6 +36,7 @@
       </div>
     </div>
     <Preferences v-if="sharedState.showPreferences"></Preferences>
+    <EditaroUpdateNotification></EditaroUpdateNotification>
   </div>
 </template>
 
@@ -53,11 +54,13 @@ import languages from './lib/languages'
 import './assets/style.scss'
 import { initVimMode } from 'monaco-vim'
 import Preferences from './components/Preferences.vue'
+import EditaroUpdateNotification from './components/EditaroUpdateNotification.vue'
 import store, { SharedState } from './store'
 
 @Component({
   components: {
     Preferences,
+    EditaroUpdateNotification,
   },
 })
 export default class App extends Vue {
